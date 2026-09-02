@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import {
   ArrowUpRight,
+  Download,
   Github,
   Linkedin,
   Mail,
@@ -9,7 +10,9 @@ import {
 } from "lucide-react";
 
 import aurora from "@/assets/aurora.jpg";
+import portrait from "@/assets/omayma.png.asset.json";
 import { SparkleAccents, SparkleField } from "@/components/Sparkles";
+
 import {
   certifications,
   cv,
