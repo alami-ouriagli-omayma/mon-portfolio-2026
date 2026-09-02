@@ -336,15 +336,28 @@ function Resume({ lang }: { lang: Lang }) {
             </div>
           ))}
         </div>
-        <a
-          href={links.linkedin}
-          target="_blank"
-          rel="noreferrer"
-          className="mt-8 inline-flex items-center gap-2 rounded-full glass glass-hover px-6 py-3 text-sm font-semibold"
-        >
-          <Linkedin className="h-4 w-4" />
-          {lang === "fr" ? "Voir mon profil complet" : "See my full profile"}
-        </a>
+        <div className="mt-8 flex flex-wrap gap-3">
+          <a
+            href={links.cv}
+            target="_blank"
+            rel="noreferrer"
+            download
+            className="inline-flex items-center gap-2 rounded-full gradient-surface px-6 py-3 text-sm font-semibold text-accent-foreground shadow-[var(--shadow-glow)] transition-transform hover:-translate-y-0.5"
+          >
+            <Download className="h-4 w-4" />
+            {t.cta.downloadCv[lang]}
+          </a>
+          <a
+            href={links.linkedin}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 rounded-full glass glass-hover px-6 py-3 text-sm font-semibold"
+          >
+            <Linkedin className="h-4 w-4" />
+            {lang === "fr" ? "Voir mon profil complet" : "See my full profile"}
+          </a>
+        </div>
+
       </div>
     </section>
   );
