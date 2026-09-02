@@ -1,4 +1,7 @@
+import cvAsset from "@/assets/cv.pdf.asset.json";
+
 export type Lang = "fr" | "en";
+
 
 export type Project = {
   emoji: string;
@@ -104,23 +107,34 @@ export const projects: Project[] = [
 ];
 
 export const skills = [
-  { name: "React", icon: "react/react-original" },
-  { name: "Next.js", icon: "nextjs/nextjs-original" },
+  { name: "HTML5", icon: "html5/html5-original" },
+  { name: "CSS3", icon: "css3/css3-original" },
   { name: "JavaScript", icon: "javascript/javascript-original" },
   { name: "TypeScript", icon: "typescript/typescript-original" },
-  { name: "Python", icon: "python/python-original" },
-  { name: "FastAPI", icon: "fastapi/fastapi-original" },
+  { name: "React", icon: "react/react-original" },
+  { name: "Next.js", icon: "nextjs/nextjs-original" },
+  { name: "Vue.js", icon: "vuejs/vuejs-original" },
+  { name: "Tailwind CSS", icon: "tailwindcss/tailwindcss-original" },
   { name: "Node.js", icon: "nodejs/nodejs-original" },
   { name: "Express", icon: "express/express-original" },
+  { name: "FastAPI", icon: "fastapi/fastapi-original" },
+  { name: "Python", icon: "python/python-original" },
+  { name: "Java", icon: "java/java-original" },
+  { name: "C", icon: "c/c-original" },
   { name: "MongoDB", icon: "mongodb/mongodb-original" },
   { name: "MySQL", icon: "mysql/mysql-original" },
+  { name: "PostgreSQL", icon: "postgresql/postgresql-original" },
   { name: "Supabase", icon: "supabase/supabase-original" },
   { name: "Firebase", icon: "firebase/firebase-original" },
-  { name: "TensorFlow", icon: "tensorflow/tensorflow-original" },
-  { name: "Docker", icon: "docker/docker-original" },
   { name: "Git", icon: "git/git-original" },
+  { name: "GitHub", icon: "github/github-original" },
+  { name: "GitLab", icon: "gitlab/gitlab-original" },
+  { name: "VS Code", icon: "vscode/vscode-original" },
+  { name: "Figma", icon: "figma/figma-original" },
   { name: "Postman", icon: "postman/postman-original" },
+  { name: "WordPress", icon: "wordpress/wordpress-original" },
 ];
+
 
 export const certifications: {
   group: Record<Lang, string>;
@@ -242,34 +256,40 @@ export const cv: {
     items: [
       {
         title: {
-          fr: "Génie Informatique & Intelligence Artificielle",
-          en: "Computer Engineering & Artificial Intelligence",
+          fr: "Cycle d'ingénieur — Génie Informatique & IA",
+          en: "Engineering degree — Computer Engineering & AI",
         },
-        meta: "ENSA Safi — Université Cadi Ayyad · 2023 — 2028",
+        meta: "ENSA Safi · Septembre 2022 — présent",
         body: {
-          fr: "Cycle ingénieur : algorithmique, développement web full-stack, bases de données, réseaux, machine learning et deep learning.",
-          en: "Engineering degree: algorithms, full-stack web development, databases, networking, machine learning and deep learning.",
+          fr: "Cycle préparatoire intégré puis cycle d'ingénieur en Génie Informatique et Intelligence Artificielle.",
+          en: "Integrated preparatory cycle then engineering cycle in Computer Engineering and Artificial Intelligence.",
+        },
+      },
+      {
+        title: {
+          fr: "Première année MIPC",
+          en: "First year MIPC",
+        },
+        meta: "FST Marrakech · Septembre 2021 — Juin 2022",
+        body: {
+          fr: "Mathématiques, Informatique, Physique et Chimie.",
+          en: "Mathematics, Computer Science, Physics and Chemistry.",
         },
       },
     ],
   },
   {
-    section: { fr: "Expériences & projets clés", en: "Experience & key projects" },
+    section: { fr: "Expérience professionnelle", en: "Professional experience" },
     items: [
       {
-        title: { fr: "Projets IA appliqués", en: "Applied AI projects" },
-        meta: "HANOUTY.AI · IDS/IPS · MoroMatch",
-        body: {
-          fr: "Conception et développement de systèmes IA de bout en bout : vision par ordinateur, apprentissage par renforcement, APIs FastAPI et dashboards React.",
-          en: "End-to-end design and development of AI systems: computer vision, reinforcement learning, FastAPI services and React dashboards.",
+        title: {
+          fr: "Stagiaire en développement web — Octicode",
+          en: "Web development intern — Octicode",
         },
-      },
-      {
-        title: { fr: "Développement full-stack", en: "Full-stack development" },
-        meta: "MedClick · TSWIRTI",
+        meta: "Juin 2025 — Août 2025",
         body: {
-          fr: "Applications web complètes avec authentification sécurisée, gestion de données et interfaces modernes.",
-          en: "Complete web applications with secure authentication, data management and modern interfaces.",
+          fr: "Projet VULNURA (Next.js, React, TypeScript) : tableau de bord analytique pour visualiser et suivre les statistiques de vulnérabilités CVE en temps réel. Projet BIG FOURNITURES (WordPress, WooCommerce, Elementor Pro) : plateforme e-commerce pour une papeterie moderne.",
+          en: "VULNURA project (Next.js, React, TypeScript): an analytics dashboard to visualise and track real-time CVE vulnerability statistics. BIG FOURNITURES project (WordPress, WooCommerce, Elementor Pro): an e-commerce platform for a modern stationery store.",
         },
       },
     ],
@@ -278,10 +298,17 @@ export const cv: {
     section: { fr: "Langues", en: "Languages" },
     items: [
       { title: { fr: "Arabe — langue maternelle", en: "Arabic — native" }, meta: "" },
-      { title: { fr: "Français — courant", en: "French — fluent" }, meta: "" },
-      { title: { fr: "Anglais — professionnel", en: "English — professional" }, meta: "" },
+      { title: { fr: "Français — courant (C1)", en: "French — fluent (C1)" }, meta: "" },
+      {
+        title: {
+          fr: "Anglais — maîtrise professionnelle",
+          en: "English — professional working proficiency",
+        },
+        meta: "",
+      },
     ],
   },
+
 ];
 
 export const t = {
@@ -301,9 +328,10 @@ export const t = {
       en: "Engineering student in Computer Science & Artificial Intelligence",
     },
     intro: {
-      fr: "Je conçois des produits où l'intelligence artificielle rencontre une expérience simple et humaine — de la vision par ordinateur à la cybersécurité adaptative.",
-      en: "I build products where artificial intelligence meets a simple, human experience — from computer vision to adaptive cybersecurity.",
+      fr: "Étudiante en 3ème année cycle d'ingénieur en Génie Informatique à ENSA Safi, spécialisée en Informatique et AI. Passionnée par le développement Web et les technologies innovantes. Je combine ma polyvalence technique, à mes SoftSkills pour transformer des défis complexes en solutions évolutives et performantes.",
+      en: "Third-year computer engineering student at ENSA Safi, specialising in Computer Science and AI. Passionate about web development and innovative technologies. I combine my technical versatility with my soft skills to turn complex challenges into scalable, high-performing solutions.",
     },
+
     ctaProjects: { fr: "Voir mes projets", en: "See my projects" },
     ctaContact: { fr: "Me contacter", en: "Get in touch" },
   },
@@ -332,5 +360,5 @@ export const links = {
   github: "https://github.com/alami-ouriagli-omayma",
   linkedin: "https://www.linkedin.com/in/alami-ouriagli-omayma-861443251/",
   email: "mailto:alamiouriagliomayma@gmail.com",
-  cv: "/cv-omayma-alami-ouriagli.pdf",
+  cv: cvAsset.url,
 };
