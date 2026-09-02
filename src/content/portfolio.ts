@@ -325,9 +325,10 @@ export const t = {
       en: "Engineering student in Computer Science & Artificial Intelligence",
     },
     intro: {
-      fr: "Je conçois des produits où l'intelligence artificielle rencontre une expérience simple et humaine — de la vision par ordinateur à la cybersécurité adaptative.",
-      en: "I build products where artificial intelligence meets a simple, human experience — from computer vision to adaptive cybersecurity.",
+      fr: "Étudiante en 3ème année cycle d'ingénieur en Génie Informatique à ENSA Safi, spécialisée en Informatique et AI. Passionnée par le développement Web et les technologies innovantes. Je combine ma polyvalence technique, à mes SoftSkills pour transformer des défis complexes en solutions évolutives et performantes.",
+      en: "Third-year computer engineering student at ENSA Safi, specialising in Computer Science and AI. Passionate about web development and innovative technologies. I combine my technical versatility with my soft skills to turn complex challenges into scalable, high-performing solutions.",
     },
+
     ctaProjects: { fr: "Voir mes projets", en: "See my projects" },
     ctaContact: { fr: "Me contacter", en: "Get in touch" },
   },
