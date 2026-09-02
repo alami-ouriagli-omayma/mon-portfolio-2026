@@ -104,23 +104,34 @@ export const projects: Project[] = [
 ];
 
 export const skills = [
-  { name: "React", icon: "react/react-original" },
-  { name: "Next.js", icon: "nextjs/nextjs-original" },
+  { name: "HTML5", icon: "html5/html5-original" },
+  { name: "CSS3", icon: "css3/css3-original" },
   { name: "JavaScript", icon: "javascript/javascript-original" },
   { name: "TypeScript", icon: "typescript/typescript-original" },
-  { name: "Python", icon: "python/python-original" },
-  { name: "FastAPI", icon: "fastapi/fastapi-original" },
+  { name: "React", icon: "react/react-original" },
+  { name: "Next.js", icon: "nextjs/nextjs-original" },
+  { name: "Vue.js", icon: "vuejs/vuejs-original" },
+  { name: "Tailwind CSS", icon: "tailwindcss/tailwindcss-original" },
   { name: "Node.js", icon: "nodejs/nodejs-original" },
   { name: "Express", icon: "express/express-original" },
+  { name: "FastAPI", icon: "fastapi/fastapi-original" },
+  { name: "Python", icon: "python/python-original" },
+  { name: "Java", icon: "java/java-original" },
+  { name: "C", icon: "c/c-original" },
   { name: "MongoDB", icon: "mongodb/mongodb-original" },
   { name: "MySQL", icon: "mysql/mysql-original" },
+  { name: "PostgreSQL", icon: "postgresql/postgresql-original" },
   { name: "Supabase", icon: "supabase/supabase-original" },
   { name: "Firebase", icon: "firebase/firebase-original" },
-  { name: "TensorFlow", icon: "tensorflow/tensorflow-original" },
-  { name: "Docker", icon: "docker/docker-original" },
   { name: "Git", icon: "git/git-original" },
+  { name: "GitHub", icon: "github/github-original" },
+  { name: "GitLab", icon: "gitlab/gitlab-original" },
+  { name: "VS Code", icon: "vscode/vscode-original" },
+  { name: "Figma", icon: "figma/figma-original" },
   { name: "Postman", icon: "postman/postman-original" },
+  { name: "WordPress", icon: "wordpress/wordpress-original" },
 ];
+
 
 export const certifications: {
   group: Record<Lang, string>;
