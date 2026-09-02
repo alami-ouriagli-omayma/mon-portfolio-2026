@@ -119,7 +119,6 @@ export const skills = [
   { name: "Express", icon: "express/express-original" },
   { name: "FastAPI", icon: "fastapi/fastapi-original" },
   { name: "Python", icon: "python/python-original" },
-  { name: "Java", icon: "java/java-original" },
   { name: "C", icon: "c/c-original" },
   { name: "MongoDB", icon: "mongodb/mongodb-original" },
   { name: "MySQL", icon: "mysql/mysql-original" },

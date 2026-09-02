@@ -41,15 +41,38 @@ export function SparkleField({ density = 90 }: { density?: number }) {
       }));
     };
 
+    const LINK_DIST = 130;
+
     const draw = () => {
       frame += 1;
       ctx.clearRect(0, 0, canvas.offsetWidth, canvas.offsetHeight);
       for (const s of stars) {
-        const twinkle = (Math.sin(frame * s.speed + s.phase) + 1) / 2;
         s.y -= s.drift;
         if (s.y < -4) s.y = canvas.offsetHeight + 4;
+      }
+      // constellation lines linking nearby sparkles
+      for (let i = 0; i < stars.length; i++) {
+        for (let j = i + 1; j < stars.length; j++) {
+          const a = stars[i];
+          const b = stars[j];
+          const dx = a.x - b.x;
+          const dy = a.y - b.y;
+          const dist = Math.hypot(dx, dy);
+          if (dist < LINK_DIST) {
+            const alpha = (1 - dist / LINK_DIST) * 0.28;
+            ctx.beginPath();
+            ctx.strokeStyle = `hsla(232, 100%, 78%, ${alpha})`;
+            ctx.lineWidth = 0.6;
+            ctx.moveTo(a.x, a.y);
+            ctx.lineTo(b.x, b.y);
+            ctx.stroke();
+          }
+        }
+      }
+      for (const s of stars) {
+        const twinkle = (Math.sin(frame * s.speed + s.phase) + 1) / 2;
         ctx.beginPath();
-        ctx.fillStyle = `hsla(${s.hue}, 100%, ${78 + twinkle * 18}%, ${0.15 + twinkle * 0.75})`;
+        ctx.fillStyle = `hsla(${s.hue}, 100%, ${80 + twinkle * 16}%, ${0.2 + twinkle * 0.75})`;
         ctx.arc(s.x, s.y, s.r * (0.6 + twinkle * 0.8), 0, Math.PI * 2);
         ctx.fill();
       }
