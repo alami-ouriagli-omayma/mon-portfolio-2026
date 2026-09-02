@@ -253,34 +253,40 @@ export const cv: {
     items: [
       {
         title: {
-          fr: "Génie Informatique & Intelligence Artificielle",
-          en: "Computer Engineering & Artificial Intelligence",
+          fr: "Cycle d'ingénieur — Génie Informatique & IA",
+          en: "Engineering degree — Computer Engineering & AI",
         },
-        meta: "ENSA Safi — Université Cadi Ayyad · 2023 — 2028",
+        meta: "ENSA Safi · Septembre 2022 — présent",
         body: {
-          fr: "Cycle ingénieur : algorithmique, développement web full-stack, bases de données, réseaux, machine learning et deep learning.",
-          en: "Engineering degree: algorithms, full-stack web development, databases, networking, machine learning and deep learning.",
+          fr: "Cycle préparatoire intégré puis cycle d'ingénieur en Génie Informatique et Intelligence Artificielle.",
+          en: "Integrated preparatory cycle then engineering cycle in Computer Engineering and Artificial Intelligence.",
+        },
+      },
+      {
+        title: {
+          fr: "Première année MIPC",
+          en: "First year MIPC",
+        },
+        meta: "FST Marrakech · Septembre 2021 — Juin 2022",
+        body: {
+          fr: "Mathématiques, Informatique, Physique et Chimie.",
+          en: "Mathematics, Computer Science, Physics and Chemistry.",
         },
       },
     ],
   },
   {
-    section: { fr: "Expériences & projets clés", en: "Experience & key projects" },
+    section: { fr: "Expérience professionnelle", en: "Professional experience" },
     items: [
       {
-        title: { fr: "Projets IA appliqués", en: "Applied AI projects" },
-        meta: "HANOUTY.AI · IDS/IPS · MoroMatch",
-        body: {
-          fr: "Conception et développement de systèmes IA de bout en bout : vision par ordinateur, apprentissage par renforcement, APIs FastAPI et dashboards React.",
-          en: "End-to-end design and development of AI systems: computer vision, reinforcement learning, FastAPI services and React dashboards.",
+        title: {
+          fr: "Stagiaire en développement web — Octicode",
+          en: "Web development intern — Octicode",
         },
-      },
-      {
-        title: { fr: "Développement full-stack", en: "Full-stack development" },
-        meta: "MedClick · TSWIRTI",
+        meta: "Juin 2025 — Août 2025",
         body: {
-          fr: "Applications web complètes avec authentification sécurisée, gestion de données et interfaces modernes.",
-          en: "Complete web applications with secure authentication, data management and modern interfaces.",
+          fr: "Projet VULNURA (Next.js, React, TypeScript) : tableau de bord analytique pour visualiser et suivre les statistiques de vulnérabilités CVE en temps réel. Projet BIG FOURNITURES (WordPress, WooCommerce, Elementor Pro) : plateforme e-commerce pour une papeterie moderne.",
+          en: "VULNURA project (Next.js, React, TypeScript): an analytics dashboard to visualise and track real-time CVE vulnerability statistics. BIG FOURNITURES project (WordPress, WooCommerce, Elementor Pro): an e-commerce platform for a modern stationery store.",
         },
       },
     ],
@@ -289,10 +295,17 @@ export const cv: {
     section: { fr: "Langues", en: "Languages" },
     items: [
       { title: { fr: "Arabe — langue maternelle", en: "Arabic — native" }, meta: "" },
-      { title: { fr: "Français — courant", en: "French — fluent" }, meta: "" },
-      { title: { fr: "Anglais — professionnel", en: "English — professional" }, meta: "" },
+      { title: { fr: "Français — courant (C1)", en: "French — fluent (C1)" }, meta: "" },
+      {
+        title: {
+          fr: "Anglais — maîtrise professionnelle",
+          en: "English — professional working proficiency",
+        },
+        meta: "",
+      },
     ],
   },
+
 ];
 
 export const t = {
