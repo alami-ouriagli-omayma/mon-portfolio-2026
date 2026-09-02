@@ -1,4 +1,7 @@
+import cvAsset from "@/assets/cv.pdf.asset.json";
+
 export type Lang = "fr" | "en";
+
 
 export type Project = {
   emoji: string;
@@ -357,5 +360,5 @@ export const links = {
   github: "https://github.com/alami-ouriagli-omayma",
   linkedin: "https://www.linkedin.com/in/alami-ouriagli-omayma-861443251/",
   email: "mailto:alamiouriagliomayma@gmail.com",
-  cv: "/cv-omayma-alami-ouriagli.pdf",
+  cv: cvAsset.url,
 };
