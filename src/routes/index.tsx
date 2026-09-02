@@ -155,60 +155,73 @@ function SectionTitle({ index, title }: { index: string; title: string }) {
 function Hero({ lang }: { lang: Lang }) {
   return (
     <section id="top" className="relative">
-      <div className="relative mx-auto max-w-6xl px-5 pb-20 pt-20 sm:pt-28">
-        <SparkleAccents />
-        <p className="mb-5 inline-flex items-center gap-2 rounded-full glass px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-accent">
-          <SparklesIcon className="h-3.5 w-3.5" />
-          {t.hero.kicker[lang]}
-        </p>
-        <h1 className="max-w-4xl animate-rise text-balance text-5xl font-black leading-[0.95] sm:text-7xl">
-          <span className="shimmer-text">Omayma</span>
-          <br />
-          <span className="text-foreground">Alami Ouriagli</span>
-        </h1>
-        <p className="mt-6 max-w-2xl text-lg text-accent">{t.hero.role[lang]}</p>
-        <p className="mt-4 max-w-2xl text-pretty text-muted-foreground">
-          {t.hero.intro[lang]}
-        </p>
+      <div className="relative mx-auto grid max-w-6xl gap-12 px-5 pb-20 pt-20 sm:pt-28 lg:grid-cols-[minmax(0,1.35fr)_minmax(0,1fr)] lg:items-center">
+        <div className="relative">
+          <SparkleAccents />
+          <p className="mb-5 inline-flex items-center gap-2 rounded-full glass px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-accent">
+            <SparklesIcon className="h-3.5 w-3.5" />
+            {t.hero.kicker[lang]}
+          </p>
+          <h1 className="max-w-4xl animate-rise text-balance text-5xl font-black leading-[0.95] sm:text-7xl">
+            <span className="shimmer-text">Omayma</span>
+            <br />
+            <span className="text-foreground">Alami Ouriagli</span>
+          </h1>
+          <p className="mt-6 max-w-2xl text-lg text-accent">{t.hero.role[lang]}</p>
+          <p className="mt-4 max-w-2xl text-pretty leading-relaxed text-muted-foreground">
+            {t.hero.intro[lang]}
+          </p>
 
-        <div className="mt-9 flex flex-wrap gap-3">
-          <a
-            href="#projects"
-            className="inline-flex items-center gap-2 rounded-full gradient-surface px-6 py-3 text-sm font-semibold text-accent-foreground shadow-[var(--shadow-glow)] transition-transform hover:-translate-y-0.5"
-          >
-            {t.hero.ctaProjects[lang]}
-            <ArrowUpRight className="h-4 w-4" />
-          </a>
-          <a
-            href="#contact"
-            className="inline-flex items-center gap-2 rounded-full glass glass-hover px-6 py-3 text-sm font-semibold"
-          >
-            {t.hero.ctaContact[lang]}
-          </a>
+          <div className="mt-9 flex flex-wrap gap-3">
+            <a
+              href="#projects"
+              className="inline-flex items-center gap-2 rounded-full gradient-surface px-6 py-3 text-sm font-semibold text-accent-foreground shadow-[var(--shadow-glow)] transition-transform hover:-translate-y-0.5"
+            >
+              {t.hero.ctaProjects[lang]}
+              <ArrowUpRight className="h-4 w-4" />
+            </a>
+            <a
+              href={links.cv}
+              target="_blank"
+              rel="noreferrer"
+              download
+              className="inline-flex items-center gap-2 rounded-full glass glass-hover px-6 py-3 text-sm font-semibold"
+            >
+              <Download className="h-4 w-4" />
+              {t.cta.downloadCv[lang]}
+            </a>
+            <a
+              href="#contact"
+              className="inline-flex items-center gap-2 rounded-full glass glass-hover px-6 py-3 text-sm font-semibold"
+            >
+              {t.hero.ctaContact[lang]}
+            </a>
+          </div>
         </div>
 
-        <dl className="mt-14 grid gap-4 sm:grid-cols-3">
-          {[
-            { k: "6+", v: lang === "fr" ? "Projets construits" : "Projects built" },
-            {
-              k: "8+",
-              v: lang === "fr" ? "Certifications obtenues" : "Certifications earned",
-            },
-            {
-              k: "3",
-              v: lang === "fr" ? "Clubs & communautés tech" : "Tech clubs & communities",
-            },
-          ].map((s) => (
-            <div key={s.k} className="rounded-2xl glass glass-hover p-5">
-              <dt className="font-display text-3xl font-bold gradient-text">{s.k}</dt>
-              <dd className="mt-1 text-sm text-muted-foreground">{s.v}</dd>
-            </div>
-          ))}
-        </dl>
+        <div className="relative mx-auto w-full max-w-xs lg:ml-auto lg:mr-0">
+          <div
+            aria-hidden="true"
+            className="absolute -inset-6 rounded-full bg-primary/25 blur-[70px]"
+          />
+          <div className="relative overflow-hidden rounded-[2rem] glass p-3">
+            <img
+              src={portrait.url}
+              alt="Portrait d'Omayma Alami Ouriagli"
+              width={520}
+              height={520}
+              className="w-full rounded-[1.5rem] object-cover"
+            />
+          </div>
+          <span className="absolute -bottom-4 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full glass px-4 py-2 text-xs font-semibold text-accent">
+            ENSA Safi · GI & IA
+          </span>
+        </div>
       </div>
     </section>
   );
 }
+
 
 function Projects({ lang }: { lang: Lang }) {
   return (
