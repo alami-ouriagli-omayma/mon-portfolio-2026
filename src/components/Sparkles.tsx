@@ -37,7 +37,7 @@ export function SparkleField({ density = 90 }: { density?: number }) {
         phase: Math.random() * Math.PI * 2,
         speed: Math.random() * 0.02 + 0.006,
         drift: Math.random() * 0.18 + 0.03,
-        hue: Math.random() > 0.6 ? 285 : 255,
+        hue: Math.random() > 0.5 ? 225 : 210,
       }));
     };
 
@@ -49,7 +49,7 @@ export function SparkleField({ density = 90 }: { density?: number }) {
         s.y -= s.drift;
         if (s.y < -4) s.y = canvas.offsetHeight + 4;
         ctx.beginPath();
-        ctx.fillStyle = `hsla(${s.hue}, 70%, ${72 + twinkle * 20}%, ${0.15 + twinkle * 0.7})`;
+        ctx.fillStyle = `hsla(${s.hue}, 100%, ${78 + twinkle * 18}%, ${0.15 + twinkle * 0.75})`;
         ctx.arc(s.x, s.y, s.r * (0.6 + twinkle * 0.8), 0, Math.PI * 2);
         ctx.fill();
       }
