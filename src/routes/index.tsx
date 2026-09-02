@@ -9,7 +9,6 @@ import {
   Sparkles as SparklesIcon,
 } from "lucide-react";
 
-import aurora from "@/assets/aurora.jpg";
 import portrait from "@/assets/omayma.png.asset.json";
 import { SparkleAccents, SparkleField } from "@/components/Sparkles";
 
@@ -64,16 +63,8 @@ function Index() {
 
   return (
     <div className="relative min-h-screen overflow-x-hidden">
-      {/* Ambient gradient background */}
+      {/* Ambient glow + constellation sparkles */}
       <div aria-hidden="true" className="pointer-events-none fixed inset-0 -z-10">
-        <img
-          src={aurora}
-          alt=""
-          width={1536}
-          height={1024}
-          className="absolute inset-0 h-full w-full object-cover opacity-35"
-        />
-        <div className="absolute inset-0 bg-background/70" />
         <div className="absolute -left-40 top-[-10%] h-[36rem] w-[36rem] animate-float-slow rounded-full bg-primary/25 blur-[140px]" />
         <div className="absolute -right-32 top-[40%] h-[32rem] w-[32rem] animate-float-slow rounded-full bg-orchid/20 blur-[150px] [animation-delay:-6s]" />
         <SparkleField density={110} />
@@ -158,19 +149,41 @@ function SectionTitle({ index, title }: { index: string; title: string }) {
 function Hero({ lang }: { lang: Lang }) {
   return (
     <section id="top" className="relative">
-      <div className="relative mx-auto grid max-w-6xl gap-12 px-5 pb-20 pt-20 sm:pt-28 lg:grid-cols-[minmax(0,1.35fr)_minmax(0,1fr)] lg:items-center">
+      <div className="relative mx-auto max-w-6xl px-5 pb-20 pt-20 sm:pt-28">
         <div className="relative">
           <SparkleAccents />
-          <p className="mb-5 inline-flex items-center gap-2 rounded-full glass px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-accent">
-            <SparklesIcon className="h-3.5 w-3.5" />
-            {t.hero.kicker[lang]}
-          </p>
-          <h1 className="max-w-4xl animate-rise text-balance text-5xl font-black leading-[0.95] sm:text-7xl">
-            <span className="shimmer-text">Omayma</span>
-            <br />
-            <span className="text-foreground">Alami Ouriagli</span>
-          </h1>
-          <p className="mt-6 max-w-2xl text-lg text-accent">{t.hero.role[lang]}</p>
+          <div className="flex flex-col gap-8 sm:flex-row sm:items-center sm:gap-10">
+            {/* Circular portrait, left of the name */}
+            <div className="relative shrink-0">
+              <div
+                aria-hidden="true"
+                className="absolute -inset-4 rounded-full bg-primary/30 blur-[50px]"
+              />
+              <div className="relative h-36 w-36 overflow-hidden rounded-full glass p-1.5 ring-2 ring-primary/60 sm:h-44 sm:w-44">
+                <img
+                  src={portrait.url}
+                  alt="Portrait d'Omayma Alami Ouriagli"
+                  width={352}
+                  height={352}
+                  className="h-full w-full rounded-full object-cover"
+                />
+              </div>
+              <span className="absolute -bottom-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full glass px-3 py-1 text-[11px] font-semibold text-accent">
+                ENSA Safi · GI & IA
+              </span>
+            </div>
+            <div>
+              <p className="mb-5 inline-flex items-center gap-2 rounded-full glass px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-accent">
+                <SparklesIcon className="h-3.5 w-3.5" />
+                {t.hero.kicker[lang]}
+              </p>
+              <h1 className="max-w-4xl animate-rise text-balance font-[family-name:var(--font-name)] text-5xl font-semibold italic leading-[1.05] sm:text-6xl lg:text-7xl">
+                <span className="shimmer-text">Omayma</span>{" "}
+                <span className="text-foreground">Alami Ouriagli</span>
+              </h1>
+            </div>
+          </div>
+          <p className="mt-8 max-w-2xl text-lg text-accent">{t.hero.role[lang]}</p>
           <p className="mt-4 max-w-2xl text-pretty leading-relaxed text-muted-foreground">
             {t.hero.intro[lang]}
           </p>
@@ -201,25 +214,6 @@ function Hero({ lang }: { lang: Lang }) {
             </a>
           </div>
         </div>
-
-        <div className="relative mx-auto w-full max-w-xs lg:ml-auto lg:mr-0">
-          <div
-            aria-hidden="true"
-            className="absolute -inset-6 rounded-full bg-primary/25 blur-[70px]"
-          />
-          <div className="relative overflow-hidden rounded-[2rem] glass p-3">
-            <img
-              src={portrait.url}
-              alt="Portrait d'Omayma Alami Ouriagli"
-              width={520}
-              height={520}
-              className="w-full rounded-[1.5rem] object-cover"
-            />
-          </div>
-          <span className="absolute -bottom-4 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full glass px-4 py-2 text-xs font-semibold text-accent">
-            ENSA Safi · GI & IA
-          </span>
-        </div>
       </div>
     </section>
   );
@@ -241,8 +235,7 @@ function Projects({ lang }: { lang: Lang }) {
             >
               <div className="flex items-start justify-between gap-4">
                 <div className="min-w-0">
-                  <span className="text-2xl">{p.emoji}</span>
-                  <h3 className="mt-3 text-2xl font-bold">{p.title}</h3>
+                  <h3 className="text-2xl font-bold">{p.title}</h3>
                   <p className="mt-1 text-sm text-accent">{p.tagline[lang]}</p>
                 </div>
                 <span className="shrink-0 rounded-full border border-border px-3 py-1 text-xs text-muted-foreground">
