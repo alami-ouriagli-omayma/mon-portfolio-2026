@@ -128,6 +128,11 @@ export const certifications: {
     group: { fr: "Certifications techniques", en: "Technical certifications" },
     items: [
       {
+        title: "Y Combinator Full Stack Developer Job Simulation",
+        issuer: "Forage · 2026",
+        url: "https://www.linkedin.com/posts/alami-ouriagli-omayma_y-combinator-full-stack-developer-job-activity-7501690921382731776-L-1y?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD4t3QkBYr7NV90wRfNca34ic28pR8NFOZo",
+      },
+      {
         title: "Critical Thinking Skills for the Professional",
         issuer: "UC Davis & Coursera · 2025",
         url: "https://www.linkedin.com/in/alami-ouriagli-omayma-861443251/details/certifications/",
@@ -135,11 +140,6 @@ export const certifications: {
       {
         title: "Introduction to Front-End Development",
         issuer: "Meta · 2025",
-        url: "https://www.linkedin.com/in/alami-ouriagli-omayma-861443251/details/certifications/",
-      },
-      {
-        title: "SQL Intermediate",
-        issuer: "SoloLearn · 2024",
         url: "https://www.linkedin.com/in/alami-ouriagli-omayma-861443251/details/certifications/",
       },
       {
@@ -265,6 +265,17 @@ export const cv: {
   {
     section: { fr: "Expérience professionnelle", en: "Professional experience" },
     items: [
+      {
+        title: {
+          fr: "Stagiaire PFA — Conception d'agent IA — MIC MAAZIZ IT CONSEIL",
+          en: "PFA intern — AI agent design — MIC MAAZIZ IT CONSEIL",
+        },
+        meta: "Juillet 2026 — Août 2026",
+        body: {
+          fr: "Conception et développement d'un Agent d'Intelligence Artificielle autonome pour épauler les recruteurs de la plateforme MoroMatch. Lorsque la base de données interne est insuffisante, l'agent scanne le web (GitHub, LinkedIn, ReKrute) pour trouver, analyser et classer les meilleurs talents externes par rapport à une offre d'emploi réelle. Stack : Django 5, Python 3.12, PostgreSQL, modèle gpt-oss-20b via OpenRouter, APIs GitHub & Serper.dev, architecture orientée agent inspirée de LangGraph avec état partagé.",
+          en: "Designed and developed an autonomous AI agent to support recruiters on the MoroMatch platform. When the internal database is insufficient, the agent scans the web (GitHub, LinkedIn, ReKrute) to find, analyze and rank the best external talents against a real job offer. Stack: Django 5, Python 3.12, PostgreSQL, gpt-oss-20b via OpenRouter, GitHub & Serper.dev APIs, LangGraph-inspired agent architecture with shared state.",
+        },
+      },
       {
         title: {
           fr: "Stagiaire en développement web — Octicode",
