@@ -9,7 +9,7 @@ import {
   Sparkles as SparklesIcon,
 } from "lucide-react";
 
-import portrait from "@/assets/omayma.png.asset.json";
+import portrait from "@/assets/omayma-transparent.png";
 import { SparkleAccents, SparkleField } from "@/components/Sparkles";
 
 import {
@@ -65,8 +65,8 @@ function Index() {
     <div className="relative min-h-screen overflow-x-hidden">
       {/* Ambient glow + constellation sparkles */}
       <div aria-hidden="true" className="pointer-events-none fixed inset-0 -z-10">
-        <div className="absolute -left-40 top-[-10%] h-[36rem] w-[36rem] animate-float-slow rounded-full bg-primary/25 blur-[140px]" />
-        <div className="absolute -right-32 top-[40%] h-[32rem] w-[32rem] animate-float-slow rounded-full bg-orchid/20 blur-[150px] [animation-delay:-6s]" />
+        <div className="absolute -left-40 top-[-10%] h-[36rem] w-[36rem] animate-float-slow rounded-full bg-accent/20 blur-[140px]" />
+        <div className="absolute -right-32 top-[40%] h-[32rem] w-[32rem] animate-float-slow rounded-full bg-primary/18 blur-[150px] [animation-delay:-6s]" />
         <SparkleField density={110} />
       </div>
 
@@ -159,25 +159,22 @@ function Hero({ lang }: { lang: Lang }) {
                 aria-hidden="true"
                 className="absolute -inset-4 rounded-full bg-primary/30 blur-[50px]"
               />
-              <div className="relative h-36 w-36 overflow-hidden rounded-full glass p-1.5 ring-2 ring-primary/60 sm:h-44 sm:w-44">
+              <div className="relative grid h-36 w-36 place-items-end overflow-hidden rounded-full border border-foreground/50 bg-foreground/8 shadow-[var(--shadow-portrait)] ring-2 ring-primary/70 sm:h-44 sm:w-44">
                 <img
-                  src={portrait.url}
+                  src={portrait}
                   alt="Portrait d'Omayma Alami Ouriagli"
                   width={352}
                   height={352}
-                  className="h-full w-full rounded-full object-cover"
+                  className="h-[94%] w-[94%] object-contain object-bottom brightness-90"
                 />
               </div>
-              <span className="absolute -bottom-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full glass px-3 py-1 text-[11px] font-semibold text-accent">
-                ENSA Safi · GI & IA
-              </span>
             </div>
             <div>
               <p className="mb-5 inline-flex items-center gap-2 rounded-full glass px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-accent">
                 <SparklesIcon className="h-3.5 w-3.5" />
                 {t.hero.kicker[lang]}
               </p>
-              <h1 className="max-w-4xl animate-rise text-balance font-[family-name:var(--font-name)] text-5xl font-semibold italic leading-[1.05] sm:text-6xl lg:text-7xl">
+              <h1 className="max-w-4xl animate-rise text-balance font-name text-5xl font-normal leading-[1.05] sm:text-6xl lg:text-7xl">
                 <span className="shimmer-text">Omayma</span>{" "}
                 <span className="text-foreground">Alami Ouriagli</span>
               </h1>
