@@ -55,6 +55,7 @@ export function SparkleField({ density = 90 }: { density?: number }) {
         for (let j = i + 1; j < stars.length; j++) {
           const a = stars[i];
           const b = stars[j];
+          if (!a || !b) continue;
           const dx = a.x - b.x;
           const dy = a.y - b.y;
           const dist = Math.hypot(dx, dy);

@@ -119,7 +119,6 @@ export const skills = [
   { name: "Express", icon: "express/express-original" },
   { name: "FastAPI", icon: "fastapi/fastapi-original" },
   { name: "Python", icon: "python/python-original" },
-  { name: "C", icon: "c/c-original" },
   { name: "MongoDB", icon: "mongodb/mongodb-original" },
   { name: "MySQL", icon: "mysql/mysql-original" },
   { name: "PostgreSQL", icon: "postgresql/postgresql-original" },
@@ -327,8 +326,8 @@ export const t = {
       en: "Engineering student in Computer Science & Artificial Intelligence",
     },
     intro: {
-      fr: "Étudiante en 3ème année cycle d'ingénieur en Génie Informatique à ENSA Safi, spécialisée en Informatique et AI. Passionnée par le développement Web et les technologies innovantes. Je combine ma polyvalence technique, à mes SoftSkills pour transformer des défis complexes en solutions évolutives et performantes.",
-      en: "Third-year computer engineering student at ENSA Safi, specialising in Computer Science and AI. Passionate about web development and innovative technologies. I combine my technical versatility with my soft skills to turn complex challenges into scalable, high-performing solutions.",
+      fr: "Étudiante en 3ème année cycle d'ingénieur en Génie Informatique à ENSA Safi, spécialisée en Informatique et AI. Passionnée par le développement Web et les technologies innovantes. Je combine ma polyvalence technique à mes Soft Skills pour transformer des défis complexes en solutions évolutives et performantes. Je suis actuellement à la recherche d'un stage PFE.",
+      en: "Third-year computer engineering student at ENSA Safi, specialising in Computer Science and AI. Passionate about web development and innovative technologies, I combine my technical versatility with my soft skills to turn complex challenges into scalable, high-performing solutions. I am currently looking for a final-year internship.",
     },
 
     ctaProjects: { fr: "Voir mes projets", en: "See my projects" },
