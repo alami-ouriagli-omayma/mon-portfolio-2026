@@ -10,6 +10,7 @@ export type Project = {
   description: Record<Lang, string>;
   stack: string[];
   link?: string;
+  linkedinPost?: string;
   year: string;
 };
 
@@ -42,6 +43,7 @@ export const projects: Project[] = [
       en: "What if checkout queues simply disappeared? Customers place their items under an IoT camera; the image is analysed in real time to identify every product and build the basket in under three seconds. An IoT + AI + Cloud architecture with a React dashboard for live KPIs.",
     },
     stack: ["React", "FastAPI", "YOLOv8", "Supabase", "IoT", "Computer Vision"],
+    linkedinPost: "https://www.linkedin.com/feed/update/urn:li:activity:7464386645044264960/",
   },
   {
     emoji: "🛡️",
@@ -56,6 +58,7 @@ export const projects: Project[] = [
       en: "A hybrid cybersecurity system in two layers: Random Forest classification of network traffic, and an adaptive DQN agent that learns in real time whether to observe, alert or block. FastAPI backend with an interactive React dashboard.",
     },
     stack: ["React", "FastAPI", "Random Forest", "DQN", "Machine Learning"],
+    linkedinPost: "https://www.linkedin.com/feed/update/urn:li:activity:7471270475583766528/",
   },
   {
     emoji: "🖼️",
@@ -70,25 +73,7 @@ export const projects: Project[] = [
       en: "A web application for image enhancement and restoration: filtering, noise reduction, contrast enhancement, edge detection and image quality assessment.",
     },
     stack: ["React", "FastAPI", "Supabase", "Image Processing"],
-  },
-  {
-    emoji: "🌱",
-    title: "SkillAURA",
-    year: "2025",
-    tagline: {
-      fr: "Impact social & développement local",
-      en: "Social impact & local development project",
-    },
-    description: {
-      fr: "Projet d'innovation sociale utilisant le numérique pour valoriser les artisans locaux, soutenir les communautés vulnérables et favoriser l'emploi et l'inclusion digitale dans la région de Safi.",
-      en: "A social innovation project using digital solutions to empower local artisans, support vulnerable communities and promote employment and digital inclusion in the Safi region.",
-    },
-    stack: [
-      "Digital Transformation",
-      "Web Development",
-      "Social Innovation",
-      "Project Management",
-    ],
+    linkedinPost: "https://www.linkedin.com/feed/update/urn:li:activity:7455968469059166208/",
   },
   {
     emoji: "🦷",
@@ -103,6 +88,7 @@ export const projects: Project[] = [
       en: "A full-stack platform designed to simplify dental clinic management through secure JWT authentication and digital appointment management.",
     },
     stack: ["MERN Stack", "Next.js", "Node.js", "Express", "MongoDB", "JWT"],
+    linkedinPost: "https://www.linkedin.com/feed/update/urn:li:activity:7422307535518355456/",
   },
 ];
 
@@ -346,6 +332,7 @@ export const t = {
   cta: {
     downloadCv: { fr: "Télécharger mon CV", en: "Download my resume" },
     visit: { fr: "Visiter", en: "Visit" },
+    visitLinkedin: { fr: "Visiter le post LinkedIn", en: "Visit LinkedIn post" },
     contactTitle: { fr: "Travaillons ensemble", en: "Let's work together" },
     contactBody: {
       fr: "Stage, collaboration ou simple échange autour de l'IA — ma boîte de réception est toujours ouverte.",
