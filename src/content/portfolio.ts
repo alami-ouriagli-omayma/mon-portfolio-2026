@@ -332,6 +332,7 @@ export const t = {
   cta: {
     downloadCv: { fr: "Télécharger mon CV", en: "Download my resume" },
     visit: { fr: "Visiter", en: "Visit" },
+    visitLinkedin: { fr: "Visiter le post LinkedIn", en: "Visit LinkedIn post" },
     contactTitle: { fr: "Travaillons ensemble", en: "Let's work together" },
     contactBody: {
       fr: "Stage, collaboration ou simple échange autour de l'IA — ma boîte de réception est toujours ouverte.",

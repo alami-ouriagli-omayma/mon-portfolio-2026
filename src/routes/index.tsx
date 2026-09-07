@@ -252,17 +252,31 @@ function Projects({ lang }: { lang: Lang }) {
                   </li>
                 ))}
               </ul>
-              {p.link && (
-                <a
-                  href={p.link}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="mt-6 inline-flex w-fit items-center gap-1.5 text-sm font-semibold text-foreground underline-offset-4 hover:underline"
-                >
-                  {t.cta.visit[lang]}
-                  <ArrowUpRight className="h-4 w-4" />
-                </a>
-              )}
+              <div className="mt-6 flex flex-wrap items-center gap-4">
+                {p.link && (
+                  <a
+                    href={p.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex w-fit items-center gap-1.5 text-sm font-semibold text-foreground underline-offset-4 hover:underline"
+                  >
+                    {t.cta.visit[lang]}
+                    <ArrowUpRight className="h-4 w-4" />
+                  </a>
+                )}
+                {p.linkedinPost && (
+                  <a
+                    href={p.linkedinPost}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex w-fit items-center gap-1.5 text-sm font-semibold text-primary underline-offset-4 hover:underline"
+                  >
+                    <Linkedin className="h-4 w-4" />
+                    {t.cta.visitLinkedin[lang]}
+                    <ArrowUpRight className="h-4 w-4" />
+                  </a>
+                )}
+              </div>
             </article>
           ))}
         </div>
