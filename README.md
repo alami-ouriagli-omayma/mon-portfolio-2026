@@ -1,7 +1,3 @@
-# Sparkling Portfolio Refresh
-
-lovable voici mon protfolio https://alami-ouriagli-omayma.github.io/mon-portfolio/ il est un peu ancient et je veux le renouveler et lui ajouter mes nouveau projet aussi pour le design je veux le mettre plus amusant et ayant un effet de gradient aussi du glass morphisme je veux aussi un peu d'etincelle qui sont en action l'essentiel et de le renoiveler de facon  elegante en terme de couleurs, des infos du design, des projets et aussi mon cv le mettre la bas et faire son update, voici ma repo git visite mon site pour lz voir et donne mooi les etapes
-
 This project was built with [Lovable](https://lovable.dev).
 
 **Live app**: https://sparkle-and-shine-portfolio-26.lovable.app
