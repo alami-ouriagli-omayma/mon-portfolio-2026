@@ -133,6 +133,11 @@ export const certifications: {
         url: "https://www.linkedin.com/posts/alami-ouriagli-omayma_y-combinator-full-stack-developer-job-activity-7501690921382731776-L-1y?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD4t3QkBYr7NV90wRfNca34ic28pR8NFOZo",
       },
       {
+        title: "Getting Started with Git and GitHub",
+        issuer: "IBM & Coursera · 2026",
+        url: "https://www.linkedin.com/in/alami-ouriagli-omayma-861443251/details/certifications/",
+      },
+      {
         title: "Critical Thinking Skills for the Professional",
         issuer: "UC Davis & Coursera · 2025",
         url: "https://www.linkedin.com/in/alami-ouriagli-omayma-861443251/details/certifications/",
@@ -270,10 +275,10 @@ export const cv: {
           fr: "Stagiaire PFA — Conception d'agent IA — MIC MAAZIZ IT CONSEIL",
           en: "PFA intern — AI agent design — MIC MAAZIZ IT CONSEIL",
         },
-        meta: "Juillet 2026 — Août 2026",
+        meta: "Juillet 2026 — Septembre 2026",
         body: {
-          fr: "Conception et développement d'un Agent d'Intelligence Artificielle autonome pour épauler les recruteurs de la plateforme MoroMatch. Lorsque la base de données interne est insuffisante, l'agent scanne le web (GitHub, LinkedIn, ReKrute) pour trouver, analyser et classer les meilleurs talents externes par rapport à une offre d'emploi réelle. Stack : Django 5, Python 3.12, PostgreSQL, modèle gpt-oss-20b via OpenRouter, APIs GitHub & Serper.dev, architecture orientée agent inspirée de LangGraph avec état partagé.",
-          en: "Designed and developed an autonomous AI agent to support recruiters on the MoroMatch platform. When the internal database is insufficient, the agent scans the web (GitHub, LinkedIn, ReKrute) to find, analyze and rank the best external talents against a real job offer. Stack: Django 5, Python 3.12, PostgreSQL, gpt-oss-20b via OpenRouter, GitHub & Serper.dev APIs, LangGraph-inspired agent architecture with shared state.",
+          fr: "Conception d'un agent IA autonome pour assister les recruteurs de MoroMatch : scan de profils externes (GitHub, LinkedIn, ReKrute), analyse et classement par rapport à une offre d'emploi. Stack : Python, Django, PostgreSQL, OpenRouter, APIs GitHub & Serper.dev.",
+          en: "Designed an autonomous AI agent to assist MoroMatch recruiters: scanning external profiles (GitHub, LinkedIn, ReKrute), analysing and ranking them against a job offer. Stack: Python, Django, PostgreSQL, OpenRouter, GitHub & Serper.dev APIs.",
         },
       },
       {
@@ -323,8 +328,8 @@ export const t = {
       en: "Engineering student in Computer Science & Artificial Intelligence",
     },
     intro: {
-      fr: "Étudiante en 3ème année cycle d'ingénieur en Génie Informatique à ENSA Safi, spécialisée en Informatique et AI. Passionnée par le développement Web et les technologies innovantes. Je combine ma polyvalence technique à mes Soft Skills pour transformer des défis complexes en solutions évolutives et performantes. Je suis actuellement à la recherche d'un stage PFE.",
-      en: "Third-year computer engineering student at ENSA Safi, specialising in Computer Science and AI. Passionate about web development and innovative technologies, I combine my technical versatility with my soft skills to turn complex challenges into scalable, high-performing solutions. I am currently looking for a final-year internship.",
+      fr: "Étudiante en 3ème année cycle d’ingénieur en Génie Informatique à ENSA Safi, à la recherche d'un stage PFE. Spécialisée en Informatique et AI et passionnée par le développement Web et les technologies innovantes, je combine ma polyvalence technique à mes Soft Skills pour transformer des défis complexes en solutions évolutives et performantes.",
+      en: "Third-year computer engineering student at ENSA Safi, currently looking for a final-year internship. Specialising in Computer Science and AI and passionate about web development and innovative technologies, I combine my technical versatility with my soft skills to turn complex challenges into scalable, high-performing solutions.",
     },
 
     ctaProjects: { fr: "Voir mes projets", en: "See my projects" },
