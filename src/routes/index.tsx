@@ -174,7 +174,7 @@ function Hero({ lang }: { lang: Lang }) {
                 <SparklesIcon className="h-3.5 w-3.5" />
                 {t.hero.kicker[lang]}
               </p>
-              <h1 className="max-w-4xl animate-rise text-balance font-name text-5xl font-normal leading-[1.05] sm:text-6xl lg:text-7xl">
+              <h1 className="max-w-4xl animate-rise text-balance font-name text-5xl font-semibold leading-[1.05] sm:text-6xl lg:text-7xl">
                 <span className="shimmer-text">Omayma</span>{" "}
                 <span className="text-foreground">Alami Ouriagli</span>
               </h1>
