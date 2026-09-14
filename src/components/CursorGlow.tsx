@@ -48,5 +48,11 @@ export function CursorGlow() {
     };
   }, []);
 
-  return <div ref={glowRef} aria-hidden="true" className="cursor-glow" data-visible="false" />;
+  return (
+    <div ref={glowRef} aria-hidden="true" className="cursor-glow" data-visible="false">
+      <span className="neon-flow neon-flow-blue" />
+      <span className="neon-flow neon-flow-green" />
+      <span className="neon-flow neon-flow-violet" />
+    </div>
+  );
 }

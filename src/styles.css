@@ -66,6 +66,9 @@
   --ring: oklch(0.82 0.18 240);
   --lilac: oklch(0.88 0.11 240);
   --orchid: oklch(0.76 0.22 280);
+  --neon-blue: oklch(0.79 0.2 245);
+  --neon-green: oklch(0.85 0.2 155);
+  --neon-violet: oklch(0.72 0.25 300);
   --ink: oklch(0.15 0.05 268);
 
   --gradient-aurora: linear-gradient(
@@ -138,17 +141,73 @@
   --cursor-x: 50vw;
   --cursor-y: 50vh;
   position: fixed;
-  inset: 0;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 1px;
   z-index: 0;
   pointer-events: none;
   opacity: 0;
-  background: radial-gradient(
-    24rem circle at var(--cursor-x) var(--cursor-y),
-    color-mix(in oklab, var(--primary) 22%, transparent),
-    color-mix(in oklab, var(--orchid) 9%, transparent) 38%,
-    transparent 70%
-  );
-  transition: opacity 700ms ease;
+  transform: translate3d(var(--cursor-x), var(--cursor-y), 0);
+  transition:
+    opacity 900ms ease,
+    transform 180ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform, opacity;
+}
+
+.neon-flow {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: min(86vw, 64rem);
+  height: 5.5rem;
+  border-radius: 50%;
+  filter: blur(24px);
+  mix-blend-mode: screen;
+  transform-origin: center;
+  animation: neon-flow-breathe 5.5s ease-in-out infinite alternate;
+}
+
+.neon-flow-blue {
+  background: linear-gradient(90deg, transparent, color-mix(in oklab, var(--neon-blue) 75%, transparent) 30%, color-mix(in oklab, var(--neon-blue) 90%, transparent) 58%, transparent);
+  transform: translate(-52%, -50%) rotate(-12deg) skewX(-18deg);
+}
+
+.neon-flow-green {
+  width: min(72vw, 54rem);
+  height: 4rem;
+  background: linear-gradient(90deg, transparent, color-mix(in oklab, var(--neon-green) 70%, transparent) 42%, color-mix(in oklab, var(--neon-green) 82%, transparent) 62%, transparent);
+  transform: translate(-42%, -20%) rotate(10deg) skewX(22deg);
+  animation-delay: -2s;
+}
+
+.neon-flow-violet {
+  width: min(78vw, 58rem);
+  height: 4.75rem;
+  background: linear-gradient(90deg, transparent, color-mix(in oklab, var(--neon-violet) 78%, transparent) 34%, color-mix(in oklab, var(--neon-violet) 86%, transparent) 55%, transparent);
+  transform: translate(-58%, -75%) rotate(22deg) skewX(-14deg);
+  animation-delay: -4s;
+}
+
+.neon-flow::after {
+  content: "";
+  position: absolute;
+  inset: 38% 5%;
+  border-radius: inherit;
+  background: inherit;
+  filter: blur(8px);
+  opacity: 0.72;
+}
+
+@keyframes neon-flow-breathe {
+  from {
+    opacity: 0.4;
+    scale: 0.96 0.8;
+  }
+  to {
+    opacity: 0.78;
+    scale: 1.04 1.15;
+  }
 }
 
 .cursor-glow[data-visible="true"] {
