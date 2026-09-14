@@ -17,7 +17,7 @@ export function CursorGlow() {
         if (glow) {
           glow.style.setProperty("--cursor-x", `${event.clientX}px`);
           glow.style.setProperty("--cursor-y", `${event.clientY}px`);
-          glow.dataset.visible = "true";
+          glow.dataset["visible"] = "true";
         }
 
         const card = (event.target as HTMLElement).closest<HTMLElement>(".spotlight-card");
@@ -30,12 +30,12 @@ export function CursorGlow() {
 
       window.clearTimeout(fadeTimer);
       fadeTimer = window.setTimeout(() => {
-        if (glowRef.current) glowRef.current.dataset.visible = "false";
+        if (glowRef.current) glowRef.current.dataset["visible"] = "false";
       }, 900);
     };
 
     const hide = () => {
-      if (glowRef.current) glowRef.current.dataset.visible = "false";
+      if (glowRef.current) glowRef.current.dataset["visible"] = "false";
     };
 
     window.addEventListener("pointermove", move, { passive: true });
