@@ -1,4 +1,4 @@
-import cvAsset from "@/assets/cv.pdf.asset.json";
+import cvAsset from "@/assets/cv-2026.pdf.asset.json";
 
 export type Lang = "fr" | "en";
 
@@ -272,8 +272,8 @@ export const cv: {
     items: [
       {
         title: {
-          fr: "Stagiaire PFA — Conception d'agent IA — MIC MAAZIZ IT CONSEIL",
-          en: "PFA intern — AI agent design — MIC MAAZIZ IT CONSEIL",
+          fr: "Stagiaire PFA — MIC MAAZIZ IT CONSEIL",
+          en: "PFA intern — MIC MAAZIZ IT CONSEIL",
         },
         meta: "Juillet 2026 — Septembre 2026",
         body: {
