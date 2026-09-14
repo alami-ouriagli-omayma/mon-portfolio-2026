@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 
 import portrait from "@/assets/omayma-transparent.png";
+import { CursorGlow } from "@/components/CursorGlow";
 import { SparkleAccents, SparkleField } from "@/components/Sparkles";
 
 import {
@@ -63,6 +64,7 @@ function Index() {
 
   return (
     <div className="relative min-h-screen overflow-x-hidden">
+      <CursorGlow />
       {/* Ambient glow + constellation sparkles */}
       <div aria-hidden="true" className="pointer-events-none fixed inset-0 -z-10">
         <div className="absolute -left-40 top-[-10%] h-[36rem] w-[36rem] animate-float-slow rounded-full bg-accent/20 blur-[140px]" />
@@ -226,7 +228,7 @@ function Projects({ lang }: { lang: Lang }) {
           {projects.map((p, i) => (
             <article
               key={p.title}
-              className={`relative flex flex-col rounded-3xl glass glass-hover p-7 ${
+              className={`spotlight-card relative flex flex-col rounded-3xl glass glass-hover p-7 ${
                 i === 0 ? "md:col-span-2" : ""
               }`}
             >
@@ -294,7 +296,7 @@ function Skills({ lang }: { lang: Lang }) {
           {skills.map((s) => (
             <div
               key={s.name}
-              className="flex flex-col items-center gap-2 rounded-2xl glass glass-hover px-3 py-5"
+              className="spotlight-card flex flex-col items-center gap-2 rounded-2xl glass glass-hover px-3 py-5"
             >
               <img
                 src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${s.icon}.svg`}
@@ -320,7 +322,7 @@ function Resume({ lang }: { lang: Lang }) {
         <SectionTitle index="03" title={t.sections.cv[lang]} />
         <div className="grid gap-5 lg:grid-cols-3">
           {cv.map((block) => (
-            <div key={block.section.en} className="rounded-3xl glass glass-hover p-7">
+            <div key={block.section.en} className="spotlight-card rounded-3xl glass glass-hover p-7">
               <h3 className="text-lg font-bold text-accent">{block.section[lang]}</h3>
               <ul className="mt-5 space-y-5">
                 {block.items.map((item) => (
@@ -374,7 +376,7 @@ function Credentials({ lang }: { lang: Lang }) {
         <SectionTitle index="04" title={t.sections.certifications[lang]} />
         <div className="grid gap-5 md:grid-cols-2">
           {certifications.map((group) => (
-            <div key={group.group.en} className="rounded-3xl glass p-7">
+            <div key={group.group.en} className="spotlight-card rounded-3xl glass p-7">
               <h3 className="text-lg font-bold text-accent">{group.group[lang]}</h3>
               <ul className="mt-5 space-y-3">
                 {group.items.map((item) => (
@@ -417,7 +419,7 @@ function Engagement({ lang }: { lang: Lang }) {
           {engagement.map((e) => (
             <article
               key={e.title.en}
-              className="grid gap-3 rounded-3xl glass glass-hover p-7 md:grid-cols-[14rem_minmax(0,1fr)]"
+              className="spotlight-card grid gap-3 rounded-3xl glass glass-hover p-7 md:grid-cols-[14rem_minmax(0,1fr)]"
             >
               <div>
                 <h3 className="text-lg font-bold">{e.title[lang]}</h3>
