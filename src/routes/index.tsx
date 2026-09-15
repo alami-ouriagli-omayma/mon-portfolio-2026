@@ -27,7 +27,7 @@ import {
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Omayma Alami Ouriagli — Ingénieure IA & Développeuse Full-Stack" },
+      { title: "Omayma Alami Ouriagli - Etudiante Ingénieure & Développeuse Full-Stack" },
       {
         name: "description",
         content:
