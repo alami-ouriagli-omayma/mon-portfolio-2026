@@ -167,8 +167,8 @@
 }
 
 .neon-orb-core {
-  width: min(72vw, 48rem);
-  height: min(72vw, 48rem);
+  width: min(16vw, 12rem);
+  height: min(16vw, 8rem);
   background: radial-gradient(
     circle at 40% 40%,
     color-mix(in oklab, var(--foreground) 55%, transparent) 0%,

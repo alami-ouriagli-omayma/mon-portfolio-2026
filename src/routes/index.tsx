@@ -9,7 +9,7 @@ import {
   Sparkles as SparklesIcon,
 } from "lucide-react";
 
-import portrait from "@/assets/omayma-transparent.png";
+import portrait from "@/assets/avatar agent.png";
 import { CursorGlow } from "@/components/CursorGlow";
 import { SparkleAccents, SparkleField } from "@/components/Sparkles";
 
